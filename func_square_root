@@ -1,0 +1,18 @@
+from math import sqrt
+
+def discriminant(a, b, c):
+    """Функция для вычисления дискриминанта"""
+    d = b**2 - 4 * a * c
+    return d
+    # возвращать значение, посчитанное по формуле b**2 - 4 * a * c
+    
+def solve(a, b, c):
+    """Функция, которая вычисляет корни квадратного уравнения"""
+    
+    d = discriminant(a, b, c)
+    if d < 0:
+        print("Корней нет")
+    elif d == 0:
+        print(f"Один корень, x = { - b / 2 / a}")
+    elif d > 0:
+        print(f"Два корня, x1 = {(-b + sqrt(d)) / 2 / a}, x2 = {(-b - sqrt(d)) / 2 / a}")
